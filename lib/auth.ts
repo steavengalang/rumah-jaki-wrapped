@@ -11,6 +11,10 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
     }),
   ],
+  session: {
+    strategy: 'database',
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
   callbacks: {
     session: async ({ session, user }) => {
       if (session.user) {
@@ -23,6 +27,7 @@ export const authOptions: NextAuthOptions = {
     signIn: '/',
     error: '/',
   },
+  debug: process.env.NODE_ENV === 'development',
 };
 
 // Helper to check if it's December
