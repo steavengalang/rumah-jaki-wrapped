@@ -4,6 +4,8 @@ import { authOptions, canUserSubmit, getCurrentYear } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { WrappedResult } from '@/types';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
     // Check authentication
