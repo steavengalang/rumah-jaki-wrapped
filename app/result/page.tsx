@@ -10,6 +10,7 @@ import AnimatedCard from '@/components/AnimatedCard';
 import CountUpStat from '@/components/CountUpStat';
 import Confetti from '@/components/Confetti';
 import ResultCard from '@/components/ResultCard';
+import ReactionGame from '@/components/ReactionGame';
 import { useToast } from '@/components/Toast';
 import { Answer, WrappedResult } from '@/types';
 import { QUESTIONS } from '@/lib/questions';
@@ -310,6 +311,18 @@ export default function ResultPage() {
                         </AnimatedCard>
                     </motion.div>
 
+                    {/* Mini Game Section */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.0 }}
+                        className="mb-8"
+                    >
+                        <AnimatedCard className="py-6" hoverable={false}>
+                            <ReactionGame />
+                        </AnimatedCard>
+                    </motion.div>
+
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -378,8 +391,8 @@ export default function ResultPage() {
                             whileHover={{ scale: isGenerating ? 1 : 1.02 }}
                             whileTap={{ scale: isGenerating ? 1 : 0.98 }}
                             className={`w-full py-3.5 rounded-xl flex items-center justify-center gap-2 font-semibold transition-all ${isGenerating
-                                    ? 'bg-white/5 text-white/40 cursor-not-allowed'
-                                    : 'bg-white/10 hover:bg-white/15 text-white border border-white/10 hover:border-white/20'
+                                ? 'bg-white/5 text-white/40 cursor-not-allowed'
+                                : 'bg-white/10 hover:bg-white/15 text-white border border-white/10 hover:border-white/20'
                                 }`}
                         >
                             {isGenerating ? (
