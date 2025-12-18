@@ -27,7 +27,7 @@ export async function GET() {
     });
 
     // Transform data
-    const transformedResults = results.map((r) => ({
+    const transformedResults = results.map((r: { id: any; year: any; title: any; description: any; statsJson: string; highlightsJson: string; shareCaption: any; primaryArchetype: any; secondaryArchetype: any; confidence: any; isAI: any; createdAt: { toISOString: () => any; }; }) => ({
       id: r.id,
       year: r.year,
       title: r.title,

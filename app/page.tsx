@@ -8,8 +8,8 @@ import AnimatedCard from '@/components/AnimatedCard';
 import AuthButton from '@/components/AuthButton';
 
 const ARCHETYPES = [
-    { emoji: '🎮', label: 'KERKOM', desc: 'Si Kompetitif', color: 'from-blue-500 to-blue-700' },
-    { emoji: '🌊', label: 'TES OMBAK', desc: 'Si Explorer', color: 'from-cyan-500 to-cyan-700' },
+    { emoji: '📚', label: 'KERKOM', desc: 'Kerja Kelompok', color: 'from-blue-500 to-blue-700' },
+    { emoji: '🎮', label: 'TES OMBAK', desc: 'Main Game', color: 'from-cyan-500 to-cyan-700' },
     { emoji: '☕', label: 'NYANTAI', desc: 'Si Chill', color: 'from-amber-500 to-amber-700' },
     { emoji: '👻', label: 'CABUT', desc: 'Si Ninja', color: 'from-purple-500 to-purple-700' },
     { emoji: '🎉', label: 'RAMAI', desc: 'Si Hype', color: 'from-pink-500 to-pink-700' },
@@ -117,8 +117,8 @@ export default function HomePage() {
                                                 whileTap={{ scale: 0.98 }}
                                                 disabled={!isDecember}
                                                 className={`w-full sm:w-auto px-8 py-4 rounded-2xl font-semibold text-lg flex items-center justify-center gap-2 transition-all ${isDecember
-                                                        ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-xl shadow-primary-500/20 hover:shadow-2xl hover:shadow-primary-500/30'
-                                                        : 'bg-white/10 text-white/40 cursor-not-allowed'
+                                                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-xl shadow-primary-500/20 hover:shadow-2xl hover:shadow-primary-500/30'
+                                                    : 'bg-white/10 text-white/40 cursor-not-allowed'
                                                     }`}
                                             >
                                                 <span>Mulai Wrapped</span>
